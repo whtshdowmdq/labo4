@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Empleados</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link al archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Administración de Empleados</h1>
+
+        <!-- Sección para listar empleados -->
+        <button onclick="listEmployeesWithCompany()">Listar Empleados</button>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Compañía</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+                <!-- Aquí se insertarán las filas dinámicamente -->
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Sección para agregar un nuevo empleado -->
+        <h2>Agregar Empleado</h2>
+        <label for="firstName">Nombre:</label>
+        <input type="text" id="firstName"><br>
+        <label for="lastName">Apellido:</label>
+        <input type="text" id="lastName"><br>
+        <label for="companyId">ID Compañía:</label>
+        <input type="number" id="companyId"><br>
+        <button onclick="addEmployee()">Agregar Empleado</button>
+
+        <hr>
+
+        <!-- Sección para eliminar un empleado -->
+        <h2>Eliminar Empleado</h2>
+        <label for="employeeIdToDelete">ID del Empleado:</label>
+        <input type="number" id="employeeIdToDelete"><br>
+        <button onclick="deleteEmployeeById()">Eliminar Empleado</button>
+
+        <!-- Mensajes -->
+        <p id="message"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
