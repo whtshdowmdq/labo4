@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+</head>
+<body>
+    <h1>Lista de Empleados</h1>
+    <h2>Agregar Empleado</h2>
+    <form id="addEmployeeForm">
+        <label for="firstName">Nombre:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Apellido:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="companyId">Compañía:</label>
+        <select id="companyId" required></select>
+
+        <button type="submit">Agregar Empleado</button>
+    </form>
+    
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Compañía</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se generarán los empleados dinámicamente -->
+        </tbody>
+    </table>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
